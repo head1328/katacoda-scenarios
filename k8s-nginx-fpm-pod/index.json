@@ -8,7 +8,7 @@
       {
         "title": "Step 1",
         "text": "step1.md",
-        "courseData": "./courseBase.sh",
+        "courseData": "./background.sh",
         "code": "./foreground.sh"
       }
     ],
