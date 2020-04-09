@@ -23,9 +23,7 @@
         {
           "file": "1_Dockerfile",
           "target": "~/"
-        }
-      ],
-      "host01": [
+        },
         {
           "file": "1_nginx-fpm-pod_example.yml",
           "target": "~/"
