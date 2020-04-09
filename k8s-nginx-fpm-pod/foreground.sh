@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sleep 1; /usr/local/bin/wait.sh
+sleep 1; /opt/wait.sh
