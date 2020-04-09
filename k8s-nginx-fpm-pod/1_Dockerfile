@@ -1,0 +1,3 @@
+FROM php:fpm-aline
+
+COPY ./index.php /app

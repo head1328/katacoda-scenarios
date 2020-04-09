@@ -11,7 +11,14 @@
       }
     ],
     "intro": {
+      "courseData": "courseBase.sh",
       "text": "intro.md"
+    },
+    "assets": {
+      "client": {
+        "file": "1_nginx-fpm-pod_example.yml",
+        "target": "~/"
+      }
     },
     "finish": {
       "text": "finish.md"
