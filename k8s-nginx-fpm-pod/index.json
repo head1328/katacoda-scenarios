@@ -7,11 +7,12 @@
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md"
+        "text": "step1.md",
+        "courseData": "./courseBase.sh",
+        "code": "./foreground.sh"
       }
     ],
     "intro": {
-      "courseData": "./courseBase.sh",
       "text": "intro.md"
     },
     "assets": {
