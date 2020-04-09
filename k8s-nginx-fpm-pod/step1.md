@@ -1,1 +1,1 @@
-Create the test php application by executing the command: `docker build -f ./1_Dockerfile -t php-app:example-1 .`
+Create the test php application by executing the command: `docker build -f ./1_Dockerfile -t php-app:example-1 ./step1`

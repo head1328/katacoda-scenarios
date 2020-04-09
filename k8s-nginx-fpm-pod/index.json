@@ -24,16 +24,8 @@
     "assets": {
       "client": [
         {
-          "file": "1_Dockerfile",
-          "target": "~/"
-        },
-        {
-          "file": "1_nginx-fpm-pod_example.yml",
-          "target": "~/"
-        },
-        {
-          "file": "index.php",
-          "target": "~/"
+          "file": "step1/*",
+          "target": "~/step1"
         }
       ]
     }
