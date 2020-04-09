@@ -30,6 +30,10 @@
         {
           "file": "1_nginx-fpm-pod_example.yml",
           "target": "~/"
+        },
+        {
+          "file": "index.php",
+          "target": "~/"
         }
       ]
     }
