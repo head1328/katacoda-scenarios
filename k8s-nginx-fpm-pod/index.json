@@ -24,8 +24,8 @@
     "assets": {
       "client": [
         {
-          "file": "step1/*",
-          "target": "~/step1"
+          "file": "*",
+          "target": "~/"
         }
       ]
     }
