@@ -19,7 +19,14 @@
       "client": {
         "file": "1_nginx-fpm-pod_example.yml",
         "target": "~/"
-      }
+      },
+      "host01": [
+        {
+          "file": "wait.sh",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ]
     },
     "finish": {
       "text": "finish.md"
