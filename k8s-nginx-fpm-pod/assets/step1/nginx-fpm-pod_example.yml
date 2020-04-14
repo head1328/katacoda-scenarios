@@ -15,6 +15,7 @@ spec:
   containers:
     # Our PHP-FPM application
     - image: php-app:example-1
+      imagePullPolicy: Never
       name: app
       volumeMounts:
         - name: shared-files
