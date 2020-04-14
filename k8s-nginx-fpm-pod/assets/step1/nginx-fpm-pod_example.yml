@@ -5,7 +5,7 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: phpfpm-nginx-example
+  name: phpfpm-nginx-example-1
 spec:
   volumes:
     # Create the shared files volume to be used in both pods
@@ -14,7 +14,7 @@ spec:
 
   containers:
     # Our PHP-FPM application
-    - image: my-php-app:example-1
+    - image: php-app:example-1
       name: app
       volumeMounts:
         - name: shared-files
