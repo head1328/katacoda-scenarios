@@ -17,10 +17,13 @@ helm install dash stable/kubernetes-dashboard \
 
 # Setup registry on port 31500
 REGISTRY_VERSION=2.7.1
-helm install private stable/docker-registry --namespace kube-system \
+helm install private stable/docker-registry \
+--namespace kube-system \
 --set image.tag=$REGISTRY_VERSION \
 --set service.type=NodePort \
 --set service.nodePort=31500
+
+sleep 1m
 
 kubectl port-forward --namespace kube-system \
 $(kubectl get po -n kube-system | grep private-docker-registry | \
