@@ -1,4 +1,4 @@
-For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use.
+For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Now wait until your environment is initialized and verify it's ready for your use.
 
 `kubectl version --short && \
 kubectl get componentstatus && \
