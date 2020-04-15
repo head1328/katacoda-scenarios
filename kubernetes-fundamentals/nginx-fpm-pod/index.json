@@ -38,7 +38,8 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Registry", "port": 31000}
+      {"name": "Registry", "port": 31500},
+      {"name": "NGINX PHP-FPM example 1", "port": 32500}
     ]
   },
   "backend": {
