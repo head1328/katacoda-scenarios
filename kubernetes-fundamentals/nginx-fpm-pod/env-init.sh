@@ -15,10 +15,10 @@ helm install dash stable/kubernetes-dashboard \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
 
-HELM_POD=$(kubectl get po -n kube-system | grep dash-kubernetes-dashboard | awk '{print $1;}')
-while [[ $(kubectl get pods $HELM_POD -n kube-system -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]
+DASHBOARD_POD=$(kubectl get po -n kube-system | grep dash-kubernetes-dashboard | awk '{print $1;}')
+while [[ $(kubectl get pods $DASHBOARD_POD -n kube-system -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]
 do
-    echo "waiting for pod $HELM_POD" && sleep 1
+    echo "waiting for pod $DASHBOARD_POD" && sleep 1
 done
 
 # Setup registry on port 31500
