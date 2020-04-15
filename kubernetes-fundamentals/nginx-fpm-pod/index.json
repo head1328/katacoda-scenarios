@@ -26,10 +26,8 @@
     },
     "assets": {
       "client": [
-        {
-          "file": "step1/*",
-          "target": "~"
-        }
+        {"file": "step1/*", "target": "~"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
   },
