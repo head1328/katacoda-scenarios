@@ -1,0 +1,12 @@
+{
+    "title": "Kubernetes Fundamentals",
+    "icon": "fa-kubernetes",
+    "description": "Learn the fundamental building blocks of Kubernetes with hands-on explanations.",
+    "courses": [
+      {
+        "course_id": "nginx-fpm-pod",
+        "title": "NGINX PHP-FPM pod",
+        "description": "Create a pod containing a sample PHP-FPM application and NGINX."
+      }
+    ]
+  }

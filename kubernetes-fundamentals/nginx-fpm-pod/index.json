@@ -1,6 +1,6 @@
 {
-  "title": "kubernetes nginx php-fpm pod",
-  "description": "sharing files between nginx and php-fpm",
+  "title": "NGINX PHP-FPM pod",
+  "description": "Sharing files between NGINX and PHP-FPM",
   "difficulty": "Advanced",
   "time": "30 minutes",
   "details": {
@@ -8,7 +8,8 @@
       {
         "title": "Step 1",
         "text": "step1.md",
-        "verify": "step1-verify.sh"
+        "verify": "step1-verify.sh",
+        "code": "clear.sh"
       },
       {
         "title": "Step 2",
@@ -16,7 +17,9 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Kevin Horst](https://www.kevinhorst.de)"
     },
     "finish": {
       "text": "finish.md"
@@ -31,7 +34,13 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "Registry", "port": 31000}
+    ]
   },
   "backend": {
     "imageid": "kubernetes-cluster-running"

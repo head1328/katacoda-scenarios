@@ -1,0 +1,10 @@
+{
+    "courses": [
+      {
+        "title": "Kubernetes Fundamentals",
+        "description": "Learn the fundamental building blocks of Kubernetes with hands-on explanations.",
+        "id": "kubernetes-fundamentals"
+      }
+    ],
+    "scenarios": []
+  }
