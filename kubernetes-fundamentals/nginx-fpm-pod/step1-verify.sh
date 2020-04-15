@@ -1,1 +1,1 @@
-(( $(curl -fsSL $REGISTRY/v2/php-app/tags/list | grep "php\-app.*example\-1" 2>/dev/null | wc -l) >= 1 )) && echo \"done\"
+(( $(curl -fsSL 127.0.0.1:31500/v2/php-app/tags/list | grep "php\-app.*example\-1" 2>/dev/null | wc -l) >= 1 )) && echo \"done\"
