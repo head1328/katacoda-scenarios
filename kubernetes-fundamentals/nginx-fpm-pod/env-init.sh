@@ -23,11 +23,15 @@ helm install private stable/docker-registry \
 --set service.type=NodePort \
 --set service.nodePort=31500
 
-sleep 1m
 
-kubectl port-forward --namespace kube-system \
-$(kubectl get po -n kube-system | grep private-docker-registry | \
-awk '{print $1;}') 5000:5000 &
+REGISTRY_POD=$(kubectl get po -n kube-system | grep private-docker-registry | awk '{print $1;}')
+
+while [[ $(kubectl get pods $REGISTRY_POD -n kube-system -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]
+do
+    echo "waiting for pod" && sleep 1
+done
+
+kubectl port-forward --namespace kube-system $REGISTRY_POD 5000:5000 &
 
 export REGISTRY=127.0.0.1:31500
 
