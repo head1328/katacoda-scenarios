@@ -1,40 +1,7 @@
-# First, create a ConfigMap whose contents are used
-# as the default.conf file in the web server. 
-# This server uses /var/www/html as its
-# root document directory. When the server gets a 
-# request for *.php, it will forward that request
-# to our PHP-FPM container.
-kind: ConfigMap
-apiVersion: v1
-metadata:
-  name: nginx-config
-data:
-  default.conf: |
-    server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
-        
-        # Set nginx to serve files from the shared volume!
-        root   /var/www/html;
-        server_name _;
-
-        location / {
-            try_files $uri $uri/ =404;
-            index  index.php;
-        }
-
-        location ~ \.php$ {
-          include fastcgi_params;
-          fastcgi_param REQUEST_METHOD $request_method;
-          fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-          fastcgi_pass 127.0.0.1:9000;
-        }
-    }
----
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-phpfpm-example-1
+  name: nginx-phpfpm-example-2
 spec:
   ports:
   - nodePort: 32500
@@ -42,7 +9,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: nginx-phpfpm-example-1
+    app: nginx-phpfpm-example-2
   type: NodePort
 ---
 # Create a pod containing the PHP-FPM application (php-app)
@@ -51,16 +18,16 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nginx-phpfpm-example-1
+  name: nginx-phpfpm-example-2
 spec:
   template:
     metadata:
       labels:
-        app: nginx-phpfpm-example-1
+        app: nginx-phpfpm-example-2
     spec:
       containers:
       # Our PHP-FPM application
-      - image: 127.0.0.1:31500/php-app:example-1
+      - image: 127.0.0.1:31500/php-app:latest
         imagePullPolicy: IfNotPresent
         name: app
         volumeMounts:
