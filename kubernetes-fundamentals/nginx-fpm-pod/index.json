@@ -46,8 +46,8 @@
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
       {"name": "Registry", "port": 31500},
-      {"name": "NGINX PHP-FPM example 1", "port": 32500},
-      {"name": "NGINX PHP-FPM example 2", "port": 33500}
+      {"name": "NGINX PHP-FPM example 1", "port": 32501},
+      {"name": "NGINX PHP-FPM example 2", "port": 32502}
     ]
   },
   "backend": {

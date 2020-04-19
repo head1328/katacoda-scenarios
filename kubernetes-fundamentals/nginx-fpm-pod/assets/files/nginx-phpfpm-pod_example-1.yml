@@ -37,7 +37,7 @@ metadata:
   name: nginx-phpfpm-example-1
 spec:
   ports:
-  - nodePort: 32500
+  - nodePort: 32501
     port: 80
     protocol: TCP
     targetPort: 80
