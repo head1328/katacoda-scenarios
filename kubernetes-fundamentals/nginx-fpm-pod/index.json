@@ -16,6 +16,12 @@
         "text": "step2.md",
         "verify": "step2-verify.sh",
         "code": "clear.sh"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md",
+        "verify": "step3-verify.sh",
+        "code": "clear.sh"
       }
     ],
     "intro": {
