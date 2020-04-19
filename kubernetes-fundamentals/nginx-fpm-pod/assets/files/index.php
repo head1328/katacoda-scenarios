@@ -8,7 +8,7 @@
   <meta name="description" content="The nginx-fpm-pod example result page.">
   <meta name="author" content="Kevin Horst">
 
-  <link rel=stylesheet href=css/base.css>
+  <link rel=stylesheet href=base.css>
 </head>
 
 <body>

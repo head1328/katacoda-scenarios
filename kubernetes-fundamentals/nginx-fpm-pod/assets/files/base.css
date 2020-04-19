@@ -11,7 +11,7 @@ header {
     top: 0;
     left: 0;
     transform: none;
-    background-image: url(/images/nav_logo.svg);
+    background-image: url(nav_logo.svg);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
