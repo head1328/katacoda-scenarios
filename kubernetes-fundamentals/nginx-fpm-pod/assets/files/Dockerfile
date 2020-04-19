@@ -1,3 +1,3 @@
 FROM php:fpm-alpine
 
-COPY ./index.php ./css ./images /app/
+COPY ./index.php ./base.css ./nav_logo.svg /app/
