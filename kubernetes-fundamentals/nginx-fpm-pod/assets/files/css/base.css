@@ -1,0 +1,18 @@
+header {
+    height: 80px;
+}
+
+.logo {
+    position: relative;
+    float: left;
+    display: block;
+    width: 180px;
+    height: 88px;
+    top: 0;
+    left: 0;
+    transform: none;
+    background-image: url(/images/nav_logo.svg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
