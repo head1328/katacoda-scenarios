@@ -27,6 +27,6 @@ curl $REGISTRY/v2/_catalog`{{execute}}
 
 Build the sample appication:
 
-`docker build -f ./step1/Dockerfile -t $REGISTRY/php-app:latest ./step1 && \
+`docker build -f ./files/Dockerfile -t $REGISTRY/php-app:latest ./files && \
 docker push $REGISTRY/php-app:latest && \
 curl $REGISTRY/v2/_catalog`{{execute}}

@@ -1,1 +1,1 @@
-(( $(kc-tiv -n prod get pods | grep "nginx\-phpfpm\-example\-1.*Running" 2>/dev/null | wc -l) >= 1)) && echo \"done\"
+(( $(kubectl get pods | grep "nginx\-phpfpm\-example\-1.*Running" 2>/dev/null | wc -l) >= 1)) && echo \"done\"
