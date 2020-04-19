@@ -45,7 +45,7 @@ spec:
         lifecycle:
           postStart:
             exec:
-              command: ["/bin/sh", "-c", "ln -s /app /var/www/html"]
+              command: ["/bin/sh", "-c", "rm -rf /var/www/html && ln -s /app /var/www/html"]
       
       # Our nginx container, which uses the configuration declared above,
       # along with the files shared with the PHP-FPM app.
